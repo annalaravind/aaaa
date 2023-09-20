@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 function Home() {
+  const [idSelect, setIdSelect] = useState([]);
   const [bgColor, setBgColor] = useState("");
   const [click, setClick] = useState(false);
 
@@ -33,519 +30,655 @@ function Home() {
           <div className={styles.grid}>
             <div className={styles.grid_container}>
               <div className={styles.grid_child}>
-                <div className={styles.accessN}></div>
-                <button className={styles.access}>1</button>
-                <button className={styles.access}>2</button>
-                <button className={styles.access}>3</button>
-                <button className={styles.access}>4</button>
-                <button className={styles.access}>5</button>
-                <button className={styles.access}>6</button>
-                <button className={styles.access}>7</button>
-                <button className={styles.access}>8</button>
-                <button className={styles.access}>9</button>
-                <button className={styles.access}>10</button>
-                <button className={styles.access}>11</button>
-                <button className={styles.access}>12</button>
+                <div></div>
+                <button id="1" className={styles.access}>
+                  1
+                </button>
+                <button id="2" className={styles.access}>
+                  2
+                </button>
+                <button id="3" className={styles.access}>
+                  3
+                </button>
+                <button id="4" className={styles.access}>
+                  4
+                </button>
+                <button id="5" className={styles.access}>
+                  5
+                </button>
+                <button id="6" className={styles.access}>
+                  6
+                </button>
+                <button id="7" className={styles.access}>
+                  7
+                </button>
+                <button id="8" className={styles.access}>
+                  8
+                </button>
+                <button id="9" className={styles.access}>
+                  9
+                </button>
+                <button id="10" className={styles.access}>
+                  10
+                </button>
+                <button id="11" className={styles.access}>
+                  11
+                </button>
+                <button id="12" className={styles.access}>
+                  12
+                </button>
               </div>
               <div className={styles.grid_child}>
-                <button className={styles.accessY}>A</button>
+                <button id="A" className={styles.accessY}>
+                  A
+                </button>
                 <div
+                  id="A1"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="A2"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="A3"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="A4"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="A5"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="A6"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="A7"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="A8"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="A9"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="A10"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="A11"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-              </div>
-              <div className={styles.grid_child}>
-                <button className={styles.accessY}>B</button>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
+                  id="A12"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
               </div>
               <div className={styles.grid_child}>
-                <button className={styles.accessY}>C</button>
+                <button id="B" className={styles.accessY}>
+                  B
+                </button>
                 <div
+                  id="B1"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="B2"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="B3"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="B4"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="B5"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="B6"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="B7"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="B8"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="B9"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="B10"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="B11"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-              </div>
-              <div className={styles.grid_child}>
-                <button className={styles.accessY}>D</button>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
+                  id="B12"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
               </div>
               <div className={styles.grid_child}>
-                <button className={styles.accessY}>E</button>
+                <button id="C" className={styles.accessY}>
+                  C
+                </button>
                 <div
+                  id="C1"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="C2"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="C3"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="C4"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="C5"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="C6"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="C7"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="C8"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="C9"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="C10"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="C11"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-              </div>
-              <div className={styles.grid_child}>
-                <button className={styles.accessY}>F</button>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
-                  className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
-                ></div>
-                <div
+                  id="C12"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
               </div>
               <div className={styles.grid_child}>
-                <button className={styles.accessY}>G</button>
+                <button id="D" className={styles.accessY}>
+                  D
+                </button>
                 <div
+                  id="D1"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="D2"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="D3"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="D4"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="D5"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="D6"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="D7"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="D8"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="D9"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="D10"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="D11"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="D12"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
               </div>
               <div className={styles.grid_child}>
-                <button className={styles.accessY}>H</button>
+                <button id="E" className={styles.accessY}>
+                  E
+                </button>
                 <div
+                  id="E1"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="E2"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="E3"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="E4"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="E5"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="E6"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="E7"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="E8"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="E9"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="E10"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="E11"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
                 ></div>
                 <div
+                  id="E12"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+              </div>
+              <div className={styles.grid_child}>
+                <button id="F" className={styles.accessY}>
+                  F
+                </button>
+                <div
+                  id="F1"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="F2"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="F3"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="F4"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="F5"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="F6"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="F7"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="F8"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="F9"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="F10"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="F11"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="F12"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+              </div>
+              <div className={styles.grid_child}>
+                <button id="G" className={styles.accessY}>
+                  G
+                </button>
+                <div
+                  id="G1"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="G2"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="G3"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="G4"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="G5"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="G6"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="G7"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="G8"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="G9"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="G10"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="G11"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="G12"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+              </div>
+              <div className={styles.grid_child}>
+                <button id="H" className={styles.accessY}>
+                  H
+                </button>
+                <div
+                  id="H1"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="H2"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="H3"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="H4"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="H5"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="H6"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="H7"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="H8"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="H9"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="H10"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="H11"
+                  className={styles.access1}
+                  style={{ backgroundColor: bgColor }}
+                  onClick={onClickHandler}
+                ></div>
+                <div
+                  id="H12"
                   className={styles.access1}
                   style={{ backgroundColor: bgColor }}
                   onClick={onClickHandler}
