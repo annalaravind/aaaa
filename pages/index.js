@@ -4,16 +4,81 @@ import styles from "@/styles/Home.module.css";
 
 function Home() {
   const [idSelect, setIdSelect] = useState([]);
-  const [bgColor, setBgColor] = useState("");
-  const [click, setClick] = useState(false);
+  const [moving, setMoving] = useState(false);
+  console.log(idSelect);
 
-  const onClickHandler = () => {
-    if (click) {
-      setBgColor("");
+  // Indiviual Selection.....
+  const onClickHandler = (id) => {
+    if (idSelect.includes(id)) {
+      setIdSelect(idSelect.filter((value) => value !== id));
     } else {
-      setBgColor("white");
+      setIdSelect([...idSelect, id]);
     }
-    setClick(!click);
+  };
+
+  // Column Group Selection....
+  const onColumnHandler = (id) => {
+    let array = [
+      `A${id}`,
+      `B${id}`,
+      `C${id}`,
+      `D${id}`,
+      `E${id}`,
+      `F${id}`,
+      `G${id}`,
+      `H${id}`,
+    ];
+    let columnArray = [...idSelect];
+    for (let i = 0; i < array.length; i++) {
+      if (columnArray.includes(array[i])) {
+        columnArray = columnArray.filter((value) => value !== array[i]);
+      } else {
+        columnArray.push(array[i]);
+      }
+    }
+    setIdSelect(columnArray);
+  };
+
+  // Rows Group Selection....
+  const onRowsHandler = (id) => {
+    let array = [
+      `${id}1`,
+      `${id}2`,
+      `${id}3`,
+      `${id}4`,
+      `${id}5`,
+      `${id}6`,
+      `${id}7`,
+      `${id}8`,
+      `${id}9`,
+      `${id}10`,
+      `${id}11`,
+      `${id}12`,
+    ];
+    let rowArray = [...idSelect];
+    for (let i = 0; i < array.length; i++) {
+      if (rowArray.includes(array[i])) {
+        rowArray = rowArray.filter((value) => value !== array[i]);
+      } else {
+        rowArray.push(array[i]);
+      }
+    }
+    setIdSelect(rowArray);
+  };
+
+  // Moving Ball....
+  const onMovingBall = () => {
+    setMoving(!moving);
+  };
+
+  const circleStyle = {
+    width: "23px",
+    height: "23px",
+    backgroundColor: "white",
+    borderRadius: "50%",
+    transition: "transform 0.5s ease",
+    cursor: "pointer",
+    transform: moving ? "translateX(25px)" : "translateX(0px)",
   };
 
   return (
@@ -31,662 +96,1135 @@ function Home() {
             <div className={styles.grid_container}>
               <div className={styles.grid_child}>
                 <div></div>
-                <button id="1" className={styles.access}>
+                <button
+                  id="1"
+                  className={styles.access}
+                  onClick={() => onColumnHandler("1")}
+                >
                   1
                 </button>
-                <button id="2" className={styles.access}>
+                <button
+                  id="2"
+                  className={styles.access}
+                  onClick={() => onColumnHandler("2")}
+                >
                   2
                 </button>
-                <button id="3" className={styles.access}>
+                <button
+                  id="3"
+                  className={styles.access}
+                  onClick={() => onColumnHandler("3")}
+                >
                   3
                 </button>
-                <button id="4" className={styles.access}>
+                <button
+                  id="4"
+                  className={styles.access}
+                  onClick={() => onColumnHandler("4")}
+                >
                   4
                 </button>
-                <button id="5" className={styles.access}>
+                <button
+                  id="5"
+                  className={styles.access}
+                  onClick={() => onColumnHandler("5")}
+                >
                   5
                 </button>
-                <button id="6" className={styles.access}>
+                <button
+                  id="6"
+                  className={styles.access}
+                  onClick={() => onColumnHandler("6")}
+                >
                   6
                 </button>
-                <button id="7" className={styles.access}>
+                <button
+                  id="7"
+                  className={styles.access}
+                  onClick={() => onColumnHandler("7")}
+                >
                   7
                 </button>
-                <button id="8" className={styles.access}>
+                <button
+                  id="8"
+                  className={styles.access}
+                  onClick={() => onColumnHandler("8")}
+                >
                   8
                 </button>
-                <button id="9" className={styles.access}>
+                <button
+                  id="9"
+                  className={styles.access}
+                  onClick={() => onColumnHandler("9")}
+                >
                   9
                 </button>
-                <button id="10" className={styles.access}>
+                <button
+                  id="10"
+                  className={styles.access}
+                  onClick={() => onColumnHandler("10")}
+                >
                   10
                 </button>
-                <button id="11" className={styles.access}>
+                <button
+                  id="11"
+                  className={styles.access}
+                  onClick={() => onColumnHandler("11")}
+                >
                   11
                 </button>
-                <button id="12" className={styles.access}>
+                <button
+                  id="12"
+                  className={styles.access}
+                  onClick={() => onColumnHandler("12")}
+                >
                   12
                 </button>
               </div>
               <div className={styles.grid_child}>
-                <button id="A" className={styles.accessY}>
+                <button
+                  id="A"
+                  className={styles.accessY}
+                  onClick={() => onRowsHandler("A")}
+                >
                   A
                 </button>
                 <div
                   id="A1"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("A1")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("A1")}
                 ></div>
                 <div
                   id="A2"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("A2")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("A2")}
                 ></div>
                 <div
                   id="A3"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("A3")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("A3")}
                 ></div>
                 <div
                   id="A4"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("A4")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("A4")}
                 ></div>
                 <div
                   id="A5"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("A5")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("A5")}
                 ></div>
                 <div
                   id="A6"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("A6")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("A6")}
                 ></div>
                 <div
                   id="A7"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("A7")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("A7")}
                 ></div>
                 <div
                   id="A8"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("A8")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("A8")}
                 ></div>
                 <div
                   id="A9"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("A9")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("A9")}
                 ></div>
                 <div
                   id="A10"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("A10")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("A10")}
                 ></div>
                 <div
                   id="A11"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("A11")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("A11")}
                 ></div>
                 <div
                   id="A12"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("A12")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("A12")}
                 ></div>
               </div>
               <div className={styles.grid_child}>
-                <button id="B" className={styles.accessY}>
+                <button
+                  id="B"
+                  className={styles.accessY}
+                  onClick={() => onRowsHandler("B")}
+                >
                   B
                 </button>
                 <div
                   id="B1"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("B1")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("B1")}
                 ></div>
                 <div
                   id="B2"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("B2")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("B2")}
                 ></div>
                 <div
                   id="B3"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("B3")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("B3")}
                 ></div>
                 <div
                   id="B4"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("B4")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("B4")}
                 ></div>
                 <div
                   id="B5"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("B5")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("B5")}
                 ></div>
                 <div
                   id="B6"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("B6")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("B6")}
                 ></div>
                 <div
                   id="B7"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("B7")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("B7")}
                 ></div>
                 <div
                   id="B8"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("B8")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("B8")}
                 ></div>
                 <div
                   id="B9"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("B9")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("B9")}
                 ></div>
                 <div
                   id="B10"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("B10")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("B10")}
                 ></div>
                 <div
                   id="B11"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("B11")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("B11")}
                 ></div>
                 <div
                   id="B12"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("B12")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("B12")}
                 ></div>
               </div>
               <div className={styles.grid_child}>
-                <button id="C" className={styles.accessY}>
+                <button
+                  id="C"
+                  className={styles.accessY}
+                  onClick={() => onRowsHandler("C")}
+                >
                   C
                 </button>
                 <div
                   id="C1"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("C1")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("C1")}
                 ></div>
                 <div
                   id="C2"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("C2")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("C2")}
                 ></div>
                 <div
                   id="C3"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("C3")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("C3")}
                 ></div>
                 <div
                   id="C4"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("C4")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("C4")}
                 ></div>
                 <div
                   id="C5"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("C5")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("C5")}
                 ></div>
                 <div
                   id="C6"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("C6")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("C6")}
                 ></div>
                 <div
                   id="C7"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("C7")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("C7")}
                 ></div>
                 <div
                   id="C8"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("C8")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("C8")}
                 ></div>
                 <div
                   id="C9"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("C9")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("C9")}
                 ></div>
                 <div
                   id="C10"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("C10")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("C10")}
                 ></div>
                 <div
                   id="C11"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("C11")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("C11")}
                 ></div>
                 <div
                   id="C12"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("C12")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("C12")}
                 ></div>
               </div>
               <div className={styles.grid_child}>
-                <button id="D" className={styles.accessY}>
+                <button
+                  id="D"
+                  className={styles.accessY}
+                  onClick={() => onRowsHandler("D")}
+                >
                   D
                 </button>
                 <div
                   id="D1"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("D1")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("D1")}
                 ></div>
                 <div
                   id="D2"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("D2")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("D2")}
                 ></div>
                 <div
                   id="D3"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("D3")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("D3")}
                 ></div>
                 <div
                   id="D4"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("D4")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("D4")}
                 ></div>
                 <div
                   id="D5"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("D5")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("D5")}
                 ></div>
                 <div
                   id="D6"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("D6")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("D6")}
                 ></div>
                 <div
                   id="D7"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("D7")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("D7")}
                 ></div>
                 <div
                   id="D8"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("D8")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("D8")}
                 ></div>
                 <div
                   id="D9"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("D9")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("D9")}
                 ></div>
                 <div
                   id="D10"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("D10")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("D10")}
                 ></div>
                 <div
                   id="D11"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("D11")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("D11")}
                 ></div>
                 <div
                   id="D12"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("D12")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("D12")}
                 ></div>
               </div>
               <div className={styles.grid_child}>
-                <button id="E" className={styles.accessY}>
+                <button
+                  id="E"
+                  className={styles.accessY}
+                  onClick={() => onRowsHandler("E")}
+                >
                   E
                 </button>
                 <div
                   id="E1"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("E1")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("E1")}
                 ></div>
                 <div
                   id="E2"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("E2")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("E2")}
                 ></div>
                 <div
                   id="E3"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("E3")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("E3")}
                 ></div>
                 <div
                   id="E4"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("E4")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("E4")}
                 ></div>
                 <div
                   id="E5"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("E5")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("E5")}
                 ></div>
                 <div
                   id="E6"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("E6")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("E6")}
                 ></div>
                 <div
                   id="E7"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("E7")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("E7")}
                 ></div>
                 <div
                   id="E8"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("E8")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("E8")}
                 ></div>
                 <div
                   id="E9"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("E9")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("E9")}
                 ></div>
                 <div
                   id="E10"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("E10")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("E10")}
                 ></div>
                 <div
                   id="E11"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("E11")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("E11")}
                 ></div>
                 <div
                   id="E12"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("E12")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("E12")}
                 ></div>
               </div>
               <div className={styles.grid_child}>
-                <button id="F" className={styles.accessY}>
+                <button
+                  id="F"
+                  className={styles.accessY}
+                  onClick={() => onRowsHandler("F")}
+                >
                   F
                 </button>
                 <div
                   id="F1"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("F1")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("F1")}
                 ></div>
                 <div
                   id="F2"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("F2")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("F2")}
                 ></div>
                 <div
                   id="F3"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("F3")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("F3")}
                 ></div>
                 <div
                   id="F4"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("F4")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("F4")}
                 ></div>
                 <div
                   id="F5"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("F5")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("F5")}
                 ></div>
                 <div
                   id="F6"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("F6")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("F6")}
                 ></div>
                 <div
                   id="F7"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("F7")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("F7")}
                 ></div>
                 <div
                   id="F8"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("F8")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("F8")}
                 ></div>
                 <div
                   id="F9"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("F9")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("F9")}
                 ></div>
                 <div
                   id="F10"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("F10")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("F10")}
                 ></div>
                 <div
                   id="F11"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("F11")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("F11")}
                 ></div>
                 <div
                   id="F12"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("F12")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("F12")}
                 ></div>
               </div>
               <div className={styles.grid_child}>
-                <button id="G" className={styles.accessY}>
+                <button
+                  id="G"
+                  className={styles.accessY}
+                  onClick={() => onRowsHandler("G")}
+                >
                   G
                 </button>
                 <div
                   id="G1"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("G1")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("G1")}
                 ></div>
                 <div
                   id="G2"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("G2")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("G2")}
                 ></div>
                 <div
                   id="G3"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("G3")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("G3")}
                 ></div>
                 <div
                   id="G4"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("G4")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("G4")}
                 ></div>
                 <div
                   id="G5"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("G5")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("G5")}
                 ></div>
                 <div
                   id="G6"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("G6")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("G6")}
                 ></div>
                 <div
                   id="G7"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("G7")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("G7")}
                 ></div>
                 <div
                   id="G8"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("G8")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("G8")}
                 ></div>
                 <div
                   id="G9"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("G9")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("G9")}
                 ></div>
                 <div
                   id="G10"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("G10")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("G10")}
                 ></div>
                 <div
                   id="G11"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("G11")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("G11")}
                 ></div>
                 <div
                   id="G12"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("G12")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("G12")}
                 ></div>
               </div>
               <div className={styles.grid_child}>
-                <button id="H" className={styles.accessY}>
+                <button
+                  id="H"
+                  className={styles.accessY}
+                  onClick={() => onRowsHandler("H")}
+                >
                   H
                 </button>
                 <div
                   id="H1"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("H1")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("H1")}
                 ></div>
                 <div
                   id="H2"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("H2")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("H2")}
                 ></div>
                 <div
                   id="H3"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("H3")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("H3")}
                 ></div>
                 <div
                   id="H4"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("H4")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("H4")}
                 ></div>
                 <div
                   id="H5"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("H5")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("H5")}
                 ></div>
                 <div
                   id="H6"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("H6")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("H6")}
                 ></div>
                 <div
                   id="H7"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("H7")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("H7")}
                 ></div>
                 <div
                   id="H8"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("H8")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("H8")}
                 ></div>
                 <div
                   id="H9"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("H9")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("H9")}
                 ></div>
                 <div
                   id="H10"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("H10")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("H10")}
                 ></div>
                 <div
                   id="H11"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("H11")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("H11")}
                 ></div>
                 <div
                   id="H12"
                   className={styles.access1}
-                  style={{ backgroundColor: bgColor }}
-                  onClick={onClickHandler}
+                  style={{
+                    backgroundColor: idSelect.includes("H12")
+                      ? "white"
+                      : "transparent",
+                  }}
+                  onClick={() => onClickHandler("H12")}
                 ></div>
               </div>
             </div>
           </div>
-          <div className={styles.options}>1</div>
+          <div className={styles.options}>
+            <div className={styles.gradient}>
+              <div className={styles.gradient_text}>Gradient</div>
+              <div className={styles.on_off}>
+                <div className={styles.switch}>
+                  <div style={circleStyle} onClick={onMovingBall}></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
