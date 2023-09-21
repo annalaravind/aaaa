@@ -72,8 +72,8 @@ function Home() {
   };
 
   const circleStyle = {
-    width: "23px",
-    height: "23px",
+    width: "25px",
+    height: "25px",
     backgroundColor: "white",
     borderRadius: "50%",
     transition: "transform 0.5s ease",
