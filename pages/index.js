@@ -1224,6 +1224,55 @@ function Home() {
                 </div>
               </div>
             </div>
+            <div className={styles.check_box}>
+              <div className={styles.check_list}>
+                <div className={styles.input_label}>
+                  <input
+                    className={styles.check_check}
+                    type="checkbox"
+                    name="Unknown"
+                    id="Unknown"
+                  />
+                  <div>Unknown</div>
+                </div>
+                <div className={styles.input_label}>
+                  <input
+                    className={styles.check_check}
+                    type="checkbox"
+                    name="Reference"
+                    id="Reference"
+                  />
+                  <div>Reference</div>
+                </div>
+                <div className={styles.input_label}>
+                  <input
+                    className={styles.check_check}
+                    type="checkbox"
+                    name="Standards"
+                    id="Standards"
+                  />
+                  <div>Standards</div>
+                </div>
+                <div className={styles.input_label}>
+                  <input
+                    className={styles.check_check}
+                    type="checkbox"
+                    name="ntc"
+                    id="ntc"
+                  />
+                  <div>NTC</div>
+                </div>
+                <div className={styles.input_label}>
+                  <input
+                    className={styles.check_check}
+                    type="checkbox"
+                    name="Empty"
+                    id="Empty"
+                  />
+                  <div>Empty</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
