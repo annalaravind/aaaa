@@ -5,7 +5,18 @@ import styles from "@/styles/Home.module.css";
 function Home() {
   const [idSelect, setIdSelect] = useState([]);
   const [moving, setMoving] = useState(false);
+  // const [checked, setChecked] = useState(false);
+  // const [unKnown, setUnKnown] = useState(false);
+  // const [reference, setReference] = useState(false);
+  // const [standards, setStandards] = useState(false);
+  // const [ntc, setNtc] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("");
   console.log(idSelect);
+
+  const label1 = "U";
+  const label2 = "R";
+  const label3 = "S";
+  const label4 = "N";
 
   // Indiviual Selection.....
   const onClickHandler = (id) => {
@@ -79,6 +90,17 @@ function Home() {
     transition: "transform 0.5s ease",
     cursor: "pointer",
     transform: moving ? "translateX(25px)" : "translateX(0px)",
+  };
+
+  //Radio buttons
+  const onRadioHandler = (option) => {
+    setSelectedOption(option);
+  };
+
+  //Empty
+  const onEmptyHandler = () => {
+    setSelectedOption("Empty");
+    setIdSelect([]);
   };
 
   return (
@@ -198,7 +220,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("A1")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("A1")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("A1")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("A1")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("A1")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="A2"
                   className={styles.access1}
@@ -208,7 +243,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("A2")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("A2")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("A2")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("A2")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("A2")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="A3"
                   className={styles.access1}
@@ -218,7 +266,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("A3")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("A3")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("A3")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("A3")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("A3")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="A4"
                   className={styles.access1}
@@ -228,7 +289,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("A4")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("A4")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("A4")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("A4")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("A4")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="A5"
                   className={styles.access1}
@@ -238,7 +312,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("A5")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("A5")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("A5")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("A5")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("A5")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="A6"
                   className={styles.access1}
@@ -248,7 +335,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("A6")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("A6")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("A6")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("A6")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("A6")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="A7"
                   className={styles.access1}
@@ -258,7 +358,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("A7")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("A7")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("A7")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("A7")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("A7")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="A8"
                   className={styles.access1}
@@ -268,7 +381,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("A8")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("A8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("A8")
+                    ? A8
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("A8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("A8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="A9"
                   className={styles.access1}
@@ -278,7 +404,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("A9")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("A9")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("A9")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("A9")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("A9")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="A10"
                   className={styles.access1}
@@ -288,7 +427,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("A10")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("A10")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("A10")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("A10")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("A10")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="A11"
                   className={styles.access1}
@@ -298,7 +450,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("A11")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("A11")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("A11")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("A11")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("A11")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="A12"
                   className={styles.access1}
@@ -308,7 +473,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("A12")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("A12")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("A12")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("A12")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("A12")
+                    ? label4
+                    : ""}
+                </div>
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -327,7 +505,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("B1")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("B1")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("B1")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("B1")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("B1")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="B2"
                   className={styles.access1}
@@ -337,7 +528,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("B2")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("B2")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("B2")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("B2")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("B2")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="B3"
                   className={styles.access1}
@@ -347,7 +551,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("B3")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("B3")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("B3")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("B3")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("B3")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="B4"
                   className={styles.access1}
@@ -357,7 +574,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("B4")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("B4")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("B4")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("B4")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("B4")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="B5"
                   className={styles.access1}
@@ -367,7 +597,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("B5")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("B5")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("B5")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("B5")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("B5")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="B6"
                   className={styles.access1}
@@ -377,7 +620,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("B6")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("B6")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("B6")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("B6")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("B6")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="B7"
                   className={styles.access1}
@@ -387,7 +643,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("B7")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("B7")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("B7")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("B7")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("B7")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="B8"
                   className={styles.access1}
@@ -397,7 +666,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("B8")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("B8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("B8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("B8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("B8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="B9"
                   className={styles.access1}
@@ -407,7 +689,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("B9")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("B9")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("B9")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("B9")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("B9")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="B10"
                   className={styles.access1}
@@ -417,7 +712,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("B10")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="B11"
                   className={styles.access1}
@@ -427,7 +735,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("B11")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="B12"
                   className={styles.access1}
@@ -437,7 +758,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("B12")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -456,7 +790,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("C1")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="C2"
                   className={styles.access1}
@@ -466,7 +813,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("C2")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="C3"
                   className={styles.access1}
@@ -476,7 +836,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("C3")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="C4"
                   className={styles.access1}
@@ -486,7 +859,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("C4")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="C5"
                   className={styles.access1}
@@ -496,7 +882,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("C5")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="C6"
                   className={styles.access1}
@@ -506,7 +905,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("C6")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="C7"
                   className={styles.access1}
@@ -516,7 +928,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("C7")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="C8"
                   className={styles.access1}
@@ -526,7 +951,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("C8")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="C9"
                   className={styles.access1}
@@ -536,7 +974,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("C9")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="C10"
                   className={styles.access1}
@@ -546,7 +997,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("C10")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="C11"
                   className={styles.access1}
@@ -556,7 +1020,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("C11")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="C12"
                   className={styles.access1}
@@ -566,7 +1043,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("C12")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -585,7 +1075,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("D1")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="D2"
                   className={styles.access1}
@@ -595,7 +1098,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("D2")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="D3"
                   className={styles.access1}
@@ -605,7 +1121,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("D3")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="D4"
                   className={styles.access1}
@@ -615,7 +1144,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("D4")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="D5"
                   className={styles.access1}
@@ -625,7 +1167,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("D5")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="D6"
                   className={styles.access1}
@@ -635,7 +1190,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("D6")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="D7"
                   className={styles.access1}
@@ -645,7 +1213,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("D7")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="D8"
                   className={styles.access1}
@@ -655,7 +1236,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("D8")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="D9"
                   className={styles.access1}
@@ -665,7 +1259,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("D9")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="D10"
                   className={styles.access1}
@@ -675,7 +1282,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("D10")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="D11"
                   className={styles.access1}
@@ -685,7 +1305,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("D11")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="D12"
                   className={styles.access1}
@@ -695,7 +1328,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("D12")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -714,7 +1360,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("E1")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="E2"
                   className={styles.access1}
@@ -724,7 +1383,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("E2")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="E3"
                   className={styles.access1}
@@ -734,7 +1406,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("E3")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="E4"
                   className={styles.access1}
@@ -744,7 +1429,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("E4")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="E5"
                   className={styles.access1}
@@ -754,7 +1452,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("E5")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="E6"
                   className={styles.access1}
@@ -764,7 +1475,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("E6")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="E7"
                   className={styles.access1}
@@ -774,7 +1498,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("E7")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="E8"
                   className={styles.access1}
@@ -784,7 +1521,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("E8")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="E9"
                   className={styles.access1}
@@ -794,7 +1544,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("E9")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="E10"
                   className={styles.access1}
@@ -804,7 +1567,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("E10")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="E11"
                   className={styles.access1}
@@ -814,7 +1590,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("E11")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="E12"
                   className={styles.access1}
@@ -824,7 +1613,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("E12")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -843,7 +1645,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("F1")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="F2"
                   className={styles.access1}
@@ -853,7 +1668,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("F2")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="F3"
                   className={styles.access1}
@@ -863,7 +1691,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("F3")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="F4"
                   className={styles.access1}
@@ -873,7 +1714,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("F4")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="F5"
                   className={styles.access1}
@@ -883,7 +1737,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("F5")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="F6"
                   className={styles.access1}
@@ -893,7 +1760,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("F6")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="F7"
                   className={styles.access1}
@@ -903,7 +1783,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("F7")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="F8"
                   className={styles.access1}
@@ -913,7 +1806,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("F8")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="F9"
                   className={styles.access1}
@@ -923,7 +1829,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("F9")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="F10"
                   className={styles.access1}
@@ -933,7 +1852,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("F10")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="F11"
                   className={styles.access1}
@@ -943,7 +1875,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("F11")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="F12"
                   className={styles.access1}
@@ -953,7 +1898,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("F12")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -972,7 +1930,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("G1")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="G2"
                   className={styles.access1}
@@ -982,7 +1953,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("G2")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="G3"
                   className={styles.access1}
@@ -992,7 +1976,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("G3")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="G4"
                   className={styles.access1}
@@ -1002,7 +1999,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("G4")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="G5"
                   className={styles.access1}
@@ -1012,7 +2022,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("G5")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="G6"
                   className={styles.access1}
@@ -1022,7 +2045,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("G6")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="G7"
                   className={styles.access1}
@@ -1032,7 +2068,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("G7")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="G8"
                   className={styles.access1}
@@ -1042,7 +2091,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("G8")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="G9"
                   className={styles.access1}
@@ -1052,7 +2114,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("G9")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="G10"
                   className={styles.access1}
@@ -1062,7 +2137,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("G10")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="G11"
                   className={styles.access1}
@@ -1072,7 +2160,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("G11")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="G12"
                   className={styles.access1}
@@ -1082,7 +2183,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("G12")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -1101,7 +2215,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("H1")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="H2"
                   className={styles.access1}
@@ -1111,7 +2238,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("H2")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="H3"
                   className={styles.access1}
@@ -1121,7 +2261,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("H3")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="H4"
                   className={styles.access1}
@@ -1131,7 +2284,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("H4")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="H5"
                   className={styles.access1}
@@ -1141,7 +2307,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("H5")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="H6"
                   className={styles.access1}
@@ -1151,7 +2330,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("H6")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="H7"
                   className={styles.access1}
@@ -1161,7 +2353,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("H7")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="H8"
                   className={styles.access1}
@@ -1171,7 +2376,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("H8")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H8")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H8")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H8")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H8")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="H9"
                   className={styles.access1}
@@ -1181,7 +2399,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("H9")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H9")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H9")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H9")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H9")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="H10"
                   className={styles.access1}
@@ -1191,7 +2422,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("H10")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H10")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H10")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H10")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H10")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="H11"
                   className={styles.access1}
@@ -1201,7 +2445,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("H11")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H11")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H11")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H11")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H11")
+                    ? label4
+                    : ""}
+                </div>
                 <div
                   id="H12"
                   className={styles.access1}
@@ -1211,7 +2468,20 @@ function Home() {
                       : "transparent",
                   }}
                   onClick={() => onClickHandler("H12")}
-                ></div>
+                >
+                  {selectedOption === "Unknown" && idSelect.includes("H12")
+                    ? label1
+                    : ""}
+                  {selectedOption === "Reference" && idSelect.includes("H12")
+                    ? label2
+                    : ""}
+                  {selectedOption === "Standards" && idSelect.includes("H12")
+                    ? label3
+                    : ""}
+                  {selectedOption === "ntc" && idSelect.includes("H12")
+                    ? label4
+                    : ""}
+                </div>
               </div>
             </div>
           </div>
@@ -1229,45 +2499,55 @@ function Home() {
                 <div className={styles.input_label}>
                   <input
                     className={styles.check_check}
-                    type="checkbox"
-                    name="Unknown"
+                    type="radio"
+                    name="options"
                     id="Unknown"
+                    checked={selectedOption === "Unknown"}
+                    onChange={() => onRadioHandler("Unknown")}
                   />
                   <div>Unknown</div>
                 </div>
                 <div className={styles.input_label}>
                   <input
                     className={styles.check_check}
-                    type="checkbox"
-                    name="Reference"
+                    type="radio"
+                    name="options"
                     id="Reference"
+                    checked={selectedOption === "Reference"}
+                    onChange={() => onRadioHandler("Reference")}
                   />
                   <div>Reference</div>
                 </div>
                 <div className={styles.input_label}>
                   <input
                     className={styles.check_check}
-                    type="checkbox"
-                    name="Standards"
+                    type="radio"
+                    name="options"
                     id="Standards"
+                    checked={selectedOption === "Standards"}
+                    onChange={() => onRadioHandler("Standards")}
                   />
                   <div>Standards</div>
                 </div>
                 <div className={styles.input_label}>
                   <input
                     className={styles.check_check}
-                    type="checkbox"
-                    name="ntc"
+                    type="radio"
+                    name="options"
                     id="ntc"
+                    checked={selectedOption === "ntc"}
+                    onChange={() => onRadioHandler("ntc")}
                   />
                   <div>NTC</div>
                 </div>
                 <div className={styles.input_label}>
                   <input
                     className={styles.check_check}
-                    type="checkbox"
-                    name="Empty"
+                    type="radio"
+                    name="options"
                     id="Empty"
+                    checked={selectedOption === "Empty"}
+                    onChange={onEmptyHandler}
                   />
                   <div>Empty</div>
                 </div>
