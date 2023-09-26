@@ -5,11 +5,6 @@ import styles from "@/styles/Home.module.css";
 function Home() {
   const [idSelect, setIdSelect] = useState([]);
   const [moving, setMoving] = useState(false);
-  // const [checked, setChecked] = useState(false);
-  // const [unKnown, setUnKnown] = useState(false);
-  // const [reference, setReference] = useState(false);
-  // const [standards, setStandards] = useState(false);
-  // const [ntc, setNtc] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
   console.log(idSelect);
 
@@ -102,6 +97,126 @@ function Home() {
     setSelectedOption("Empty");
     setIdSelect([]);
   };
+
+  const div_1Element = [
+    { id: "A1" },
+    { id: "A2" },
+    { id: "A3" },
+    { id: "A4" },
+    { id: "A5" },
+    { id: "A6" },
+    { id: "A7" },
+    { id: "A8" },
+    { id: "A9" },
+    { id: "A10" },
+    { id: "A11" },
+    { id: "A12" },
+  ];
+
+  const div_2Element = [
+    { id: "B1" },
+    { id: "B2" },
+    { id: "B3" },
+    { id: "B4" },
+    { id: "B5" },
+    { id: "B6" },
+    { id: "B7" },
+    { id: "B8" },
+    { id: "B9" },
+    { id: "B10" },
+    { id: "B11" },
+    { id: "B12" },
+  ];
+
+  const div_3Element = [
+    { id: "C1" },
+    { id: "C2" },
+    { id: "C3" },
+    { id: "C4" },
+    { id: "C5" },
+    { id: "C6" },
+    { id: "C7" },
+    { id: "C8" },
+    { id: "C9" },
+    { id: "C10" },
+    { id: "C11" },
+    { id: "C12" },
+  ];
+
+  const div_4Element = [
+    { id: "D1" },
+    { id: "D2" },
+    { id: "D3" },
+    { id: "D4" },
+    { id: "D5" },
+    { id: "D6" },
+    { id: "D7" },
+    { id: "D8" },
+    { id: "D9" },
+    { id: "D10" },
+    { id: "D11" },
+    { id: "D12" },
+  ];
+
+  const div_5Element = [
+    { id: "E1" },
+    { id: "E2" },
+    { id: "E3" },
+    { id: "E4" },
+    { id: "E5" },
+    { id: "E6" },
+    { id: "E7" },
+    { id: "E8" },
+    { id: "E9" },
+    { id: "E10" },
+    { id: "E11" },
+    { id: "E12" },
+  ];
+
+  const div_6Element = [
+    { id: "F1" },
+    { id: "F2" },
+    { id: "F3" },
+    { id: "F4" },
+    { id: "F5" },
+    { id: "F6" },
+    { id: "F7" },
+    { id: "F8" },
+    { id: "F9" },
+    { id: "F10" },
+    { id: "F11" },
+    { id: "F12" },
+  ];
+
+  const div_7Element = [
+    { id: "G1" },
+    { id: "G2" },
+    { id: "G3" },
+    { id: "G4" },
+    { id: "G5" },
+    { id: "G6" },
+    { id: "G7" },
+    { id: "G8" },
+    { id: "G9" },
+    { id: "G10" },
+    { id: "G11" },
+    { id: "G12" },
+  ];
+
+  const div_8Element = [
+    { id: "H1" },
+    { id: "H2" },
+    { id: "H3" },
+    { id: "H4" },
+    { id: "H5" },
+    { id: "H6" },
+    { id: "H7" },
+    { id: "H8" },
+    { id: "H9" },
+    { id: "H10" },
+    { id: "H11" },
+    { id: "H12" },
+  ];
 
   return (
     <div className={styles.container}>
@@ -211,282 +326,32 @@ function Home() {
                 >
                   A
                 </button>
-                <div
-                  id="A1"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("A1")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("A1")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("A1")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("A1")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("A1")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("A1")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="A2"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("A2")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("A2")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("A2")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("A2")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("A2")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("A2")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="A3"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("A3")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("A3")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("A3")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("A3")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("A3")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("A3")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="A4"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("A4")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("A4")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("A4")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("A4")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("A4")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("A4")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="A5"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("A5")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("A5")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("A5")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("A5")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("A5")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("A5")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="A6"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("A6")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("A6")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("A6")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("A6")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("A6")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("A6")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="A7"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("A7")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("A7")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("A7")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("A7")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("A7")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("A7")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="A8"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("A8")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("A8")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("A8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("A8")
-                    ? A8
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("A8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("A8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="A9"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("A9")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("A9")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("A9")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("A9")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("A9")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("A9")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="A10"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("A10")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("A10")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("A10")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("A10")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("A10")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("A10")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="A11"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("A11")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("A11")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("A11")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("A11")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("A11")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("A11")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="A12"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("A12")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("A12")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("A12")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("A12")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("A12")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("A12")
-                    ? label4
-                    : ""}
-                </div>
+                {div_1Element.map(({ id }) => (
+                  <div
+                    key={id}
+                    id={id}
+                    className={styles.access1}
+                    style={{
+                      backgroundColor: idSelect.includes(id)
+                        ? "white"
+                        : "transparent",
+                    }}
+                    onClick={() => onClickHandler(id)}
+                  >
+                    {selectedOption === "Unknown" && idSelect.includes(id)
+                      ? label1
+                      : ""}
+                    {selectedOption === "Reference" && idSelect.includes(id)
+                      ? label2
+                      : ""}
+                    {selectedOption === "Standards" && idSelect.includes(id)
+                      ? label3
+                      : ""}
+                    {selectedOption === "ntc" && idSelect.includes(id)
+                      ? label4
+                      : ""}
+                  </div>
+                ))}
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -496,282 +361,32 @@ function Home() {
                 >
                   B
                 </button>
-                <div
-                  id="B1"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("B1")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("B1")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("B1")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("B1")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("B1")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("B1")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="B2"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("B2")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("B2")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("B2")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("B2")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("B2")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("B2")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="B3"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("B3")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("B3")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("B3")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("B3")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("B3")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("B3")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="B4"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("B4")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("B4")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("B4")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("B4")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("B4")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("B4")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="B5"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("B5")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("B5")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("B5")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("B5")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("B5")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("B5")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="B6"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("B6")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("B6")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("B6")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("B6")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("B6")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("B6")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="B7"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("B7")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("B7")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("B7")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("B7")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("B7")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("B7")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="B8"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("B8")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("B8")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("B8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("B8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("B8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("B8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="B9"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("B9")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("B9")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("B9")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("B9")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("B9")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("B9")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="B10"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("B10")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("B10")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="B11"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("B11")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("B11")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="B12"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("B12")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("B12")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
+                {div_2Element.map(({ id }) => (
+                  <div
+                    key={id}
+                    id={id}
+                    className={styles.access1}
+                    style={{
+                      backgroundColor: idSelect.includes(id)
+                        ? "white"
+                        : "transparent",
+                    }}
+                    onClick={() => onClickHandler(id)}
+                  >
+                    {selectedOption === "Unknown" && idSelect.includes(id)
+                      ? label1
+                      : ""}
+                    {selectedOption === "Reference" && idSelect.includes(id)
+                      ? label2
+                      : ""}
+                    {selectedOption === "Standards" && idSelect.includes(id)
+                      ? label3
+                      : ""}
+                    {selectedOption === "ntc" && idSelect.includes(id)
+                      ? label4
+                      : ""}
+                  </div>
+                ))}
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -781,282 +396,32 @@ function Home() {
                 >
                   C
                 </button>
-                <div
-                  id="C1"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("C1")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("C1")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="C2"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("C2")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("C2")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="C3"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("C3")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("C3")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="C4"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("C4")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("C4")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="C5"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("C5")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("C5")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="C6"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("C6")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("C6")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="C7"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("C7")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("C7")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="C8"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("C8")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("C8")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="C9"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("C9")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("C9")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="C10"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("C10")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("C10")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="C11"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("C11")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("C11")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="C12"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("C12")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("C12")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
+                {div_3Element.map(({ id }) => (
+                  <div
+                    key={id}
+                    id={id}
+                    className={styles.access1}
+                    style={{
+                      backgroundColor: idSelect.includes(id)
+                        ? "white"
+                        : "transparent",
+                    }}
+                    onClick={() => onClickHandler(id)}
+                  >
+                    {selectedOption === "Unknown" && idSelect.includes(id)
+                      ? label1
+                      : ""}
+                    {selectedOption === "Reference" && idSelect.includes(id)
+                      ? label2
+                      : ""}
+                    {selectedOption === "Standards" && idSelect.includes(id)
+                      ? label3
+                      : ""}
+                    {selectedOption === "ntc" && idSelect.includes(id)
+                      ? label4
+                      : ""}
+                  </div>
+                ))}
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -1066,282 +431,32 @@ function Home() {
                 >
                   D
                 </button>
-                <div
-                  id="D1"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("D1")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("D1")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="D2"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("D2")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("D2")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="D3"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("D3")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("D3")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="D4"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("D4")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("D4")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="D5"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("D5")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("D5")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="D6"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("D6")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("D6")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="D7"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("D7")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("D7")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="D8"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("D8")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("D8")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="D9"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("D9")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("D9")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="D10"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("D10")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("D10")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="D11"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("D11")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("D11")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="D12"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("D12")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("D12")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
+                {div_4Element.map(({ id }) => (
+                  <div
+                    key={id}
+                    id={id}
+                    className={styles.access1}
+                    style={{
+                      backgroundColor: idSelect.includes(id)
+                        ? "white"
+                        : "transparent",
+                    }}
+                    onClick={() => onClickHandler(id)}
+                  >
+                    {selectedOption === "Unknown" && idSelect.includes(id)
+                      ? label1
+                      : ""}
+                    {selectedOption === "Reference" && idSelect.includes(id)
+                      ? label2
+                      : ""}
+                    {selectedOption === "Standards" && idSelect.includes(id)
+                      ? label3
+                      : ""}
+                    {selectedOption === "ntc" && idSelect.includes(id)
+                      ? label4
+                      : ""}
+                  </div>
+                ))}
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -1351,282 +466,32 @@ function Home() {
                 >
                   E
                 </button>
-                <div
-                  id="E1"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("E1")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("E1")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="E2"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("E2")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("E2")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="E3"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("E3")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("E3")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="E4"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("E4")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("E4")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="E5"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("E5")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("E5")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="E6"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("E6")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("E6")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="E7"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("E7")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("E7")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="E8"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("E8")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("E8")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="E9"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("E9")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("E9")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="E10"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("E10")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("E10")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="E11"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("E11")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("E11")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="E12"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("E12")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("E12")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
+                {div_5Element.map(({ id }) => (
+                  <div
+                    key={id}
+                    id={id}
+                    className={styles.access1}
+                    style={{
+                      backgroundColor: idSelect.includes(id)
+                        ? "white"
+                        : "transparent",
+                    }}
+                    onClick={() => onClickHandler(id)}
+                  >
+                    {selectedOption === "Unknown" && idSelect.includes(id)
+                      ? label1
+                      : ""}
+                    {selectedOption === "Reference" && idSelect.includes(id)
+                      ? label2
+                      : ""}
+                    {selectedOption === "Standards" && idSelect.includes(id)
+                      ? label3
+                      : ""}
+                    {selectedOption === "ntc" && idSelect.includes(id)
+                      ? label4
+                      : ""}
+                  </div>
+                ))}
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -1636,282 +501,32 @@ function Home() {
                 >
                   F
                 </button>
-                <div
-                  id="F1"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("F1")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("F1")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="F2"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("F2")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("F2")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="F3"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("F3")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("F3")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="F4"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("F4")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("F4")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="F5"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("F5")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("F5")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="F6"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("F6")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("F6")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="F7"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("F7")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("F7")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="F8"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("F8")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("F8")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="F9"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("F9")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("F9")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="F10"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("F10")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("F10")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="F11"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("F11")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("F11")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="F12"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("F12")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("F12")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
+                {div_6Element.map(({ id }) => (
+                  <div
+                    key={id}
+                    id={id}
+                    className={styles.access1}
+                    style={{
+                      backgroundColor: idSelect.includes(id)
+                        ? "white"
+                        : "transparent",
+                    }}
+                    onClick={() => onClickHandler(id)}
+                  >
+                    {selectedOption === "Unknown" && idSelect.includes(id)
+                      ? label1
+                      : ""}
+                    {selectedOption === "Reference" && idSelect.includes(id)
+                      ? label2
+                      : ""}
+                    {selectedOption === "Standards" && idSelect.includes(id)
+                      ? label3
+                      : ""}
+                    {selectedOption === "ntc" && idSelect.includes(id)
+                      ? label4
+                      : ""}
+                  </div>
+                ))}
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -1921,282 +536,32 @@ function Home() {
                 >
                   G
                 </button>
-                <div
-                  id="G1"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("G1")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("G1")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="G2"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("G2")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("G2")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="G3"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("G3")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("G3")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="G4"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("G4")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("G4")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="G5"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("G5")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("G5")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="G6"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("G6")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("G6")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="G7"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("G7")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("G7")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="G8"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("G8")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("G8")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="G9"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("G9")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("G9")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="G10"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("G10")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("G10")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="G11"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("G11")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("G11")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="G12"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("G12")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("G12")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
+                {div_7Element.map(({ id }) => (
+                  <div
+                    key={id}
+                    id={id}
+                    className={styles.access1}
+                    style={{
+                      backgroundColor: idSelect.includes(id)
+                        ? "white"
+                        : "transparent",
+                    }}
+                    onClick={() => onClickHandler(id)}
+                  >
+                    {selectedOption === "Unknown" && idSelect.includes(id)
+                      ? label1
+                      : ""}
+                    {selectedOption === "Reference" && idSelect.includes(id)
+                      ? label2
+                      : ""}
+                    {selectedOption === "Standards" && idSelect.includes(id)
+                      ? label3
+                      : ""}
+                    {selectedOption === "ntc" && idSelect.includes(id)
+                      ? label4
+                      : ""}
+                  </div>
+                ))}
               </div>
               <div className={styles.grid_child}>
                 <button
@@ -2206,282 +571,32 @@ function Home() {
                 >
                   H
                 </button>
-                <div
-                  id="H1"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("H1")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("H1")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="H2"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("H2")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("H2")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="H3"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("H3")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("H3")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="H4"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("H4")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("H4")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="H5"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("H5")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("H5")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="H6"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("H6")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("H6")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="H7"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("H7")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("H7")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="H8"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("H8")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("H8")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H8")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H8")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H8")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H8")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="H9"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("H9")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("H9")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H9")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H9")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H9")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H9")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="H10"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("H10")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("H10")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H10")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H10")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H10")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H10")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="H11"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("H11")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("H11")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H11")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H11")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H11")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H11")
-                    ? label4
-                    : ""}
-                </div>
-                <div
-                  id="H12"
-                  className={styles.access1}
-                  style={{
-                    backgroundColor: idSelect.includes("H12")
-                      ? "white"
-                      : "transparent",
-                  }}
-                  onClick={() => onClickHandler("H12")}
-                >
-                  {selectedOption === "Unknown" && idSelect.includes("H12")
-                    ? label1
-                    : ""}
-                  {selectedOption === "Reference" && idSelect.includes("H12")
-                    ? label2
-                    : ""}
-                  {selectedOption === "Standards" && idSelect.includes("H12")
-                    ? label3
-                    : ""}
-                  {selectedOption === "ntc" && idSelect.includes("H12")
-                    ? label4
-                    : ""}
-                </div>
+                {div_8Element.map(({ id }) => (
+                  <div
+                    key={id}
+                    id={id}
+                    className={styles.access1}
+                    style={{
+                      backgroundColor: idSelect.includes(id)
+                        ? "white"
+                        : "transparent",
+                    }}
+                    onClick={() => onClickHandler(id)}
+                  >
+                    {selectedOption === "Unknown" && idSelect.includes(id)
+                      ? label1
+                      : ""}
+                    {selectedOption === "Reference" && idSelect.includes(id)
+                      ? label2
+                      : ""}
+                    {selectedOption === "Standards" && idSelect.includes(id)
+                      ? label3
+                      : ""}
+                    {selectedOption === "ntc" && idSelect.includes(id)
+                      ? label4
+                      : ""}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
