@@ -14,7 +14,7 @@ const Radio = ({ onChange, labelName }: RadioProps) => {
         type="radio"
         name="options"
         id="Empty"
-        // checked={selectedOption === "Empty"}
+        checked={false}
         onChange={onChange}
       />
       <div>{labelName}</div>
