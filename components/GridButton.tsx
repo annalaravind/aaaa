@@ -1,16 +1,17 @@
-import styles from "../styles/Home.module.css";
 import React from "react";
+import styles from "../styles/Home.module.css";
 
 type ColumnButtonsProps = {
   id: string;
   onClickHandler: any;
 };
 
-export default function GridButton({ id, onClickHandler }: ColumnButtonsProps) {
+const GridButton = ({ id, onClickHandler }: ColumnButtonsProps) => {
   return (
     <button id={id} className={styles.access} onClick={onClickHandler}>
       {id}
     </button>
   );
-}
-// onClick={onclick}
+};
+
+export default GridButton;

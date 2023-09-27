@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../styles/Home.module.css";
 
 type GridCellsProps = {
@@ -6,12 +7,12 @@ type GridCellsProps = {
   label: string;
   onClickHandler: any;
 };
-export default function GridCells({
+const GridCells = ({
   ColId,
   bgColor,
   label,
   onClickHandler,
-}: GridCellsProps) {
+}: GridCellsProps) => {
   return (
     <div
       key={ColId}
@@ -20,8 +21,11 @@ export default function GridCells({
       style={{
         backgroundColor: bgColor,
       }}
-      onClick={onClickHandler}>
+      onClick={onClickHandler}
+    >
       {label}
     </div>
   );
-}
+};
+
+export default GridCells;

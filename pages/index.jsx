@@ -4,19 +4,21 @@ import styles from "../styles/Home.module.css";
 import Radio from "../components/Radio";
 import GridButton from "../components/GridButton";
 import GridCells from "../components/GridCells";
-function Home() {
+
+const Home = () => {
   const selectedIds = new Set();
+  const [allIds, setAllids] = useState(new Map());
+  const [allSelectedIds, setAllSelectedids] = useState(new Map());
   const [idSelect, setIdSelect] = useState(selectedIds);
   const [allColumnSelect, setAllColumnSelect] = useState(selectedIds);
   const [allRowSelect, setAllRowSelect] = useState(selectedIds);
   const [moving, setMoving] = useState(false);
-  const [label, setLable] = useState();
 
   const radioLables = ["Unknown", "Reference", "Standards", "NTC", "Empty"];
   const alphabetId = Array.from({ length: 8 }, (_, index) =>
     String.fromCharCode(65 + index)
   );
-  const ColumnElements = [];
+  const ColoumElements = [];
 
   // Indiviual Selection.....
   const onClickHandler = (id) => {
@@ -36,31 +38,64 @@ function Home() {
       const newRowAllSet = new Set(allRowSelect);
       newRowAllSet.delete(id);
       setAllRowSelect(newRowAllSet);
+
+      // All id's
+      const newAllIds = new Map(allSelectedIds);
+      newAllIds.delete(id);
+      setAllSelectedids(newAllIds);
     } else {
       const newSet = new Set(idSelect);
       newSet.add(id);
       setIdSelect(newSet);
+
+      // all id's
+      const newAllIds = new Map(allSelectedIds);
+      newAllIds.set(id);
+      setAllSelectedids(newAllIds);
     }
   };
 
   // Column Group Selection....
   const onColumnHandler = (id) => {
     const newSet = new Set(allColumnSelect);
+    const newAllIds = new Map(allSelectedIds);
     for (let i of alphabetId) {
-      if (!allColumnSelect.has(`${i}${id}`)) newSet.add(`${i}${id}`);
-      else newSet.delete(`${i}${id}`);
+      if (!allColumnSelect.has(`${i}${id}`)) {
+        newSet.add(`${i}${id}`);
+
+        // all id's
+
+        newAllIds.set(`${i}${id}`);
+      } else {
+        newSet.delete(`${i}${id}`);
+
+        // all id's
+
+        newAllIds.delete(`${i}${id}`);
+      }
     }
+    setAllSelectedids(newAllIds);
     setAllColumnSelect(newSet);
   };
   // Rows Group Selection....
   const onRowsHandler = (id) => {
     const newSet = new Set(allRowSelect);
+    const newAllIds = new Map(allSelectedIds);
     for (let i = 1; i < 13; i++) {
       if (!allRowSelect.has(`${id}${i}`)) {
         newSet.add(`${id}${i}`);
-      } else newSet.delete(`${id}${i}`);
+        // all id's
+
+        newAllIds.set(`${id}${i}`);
+      } else {
+        newSet.delete(`${id}${i}`);
+        // all id's
+
+        newAllIds.delete(`${id}${i}`);
+      }
     }
     setAllRowSelect(newSet);
+    setAllSelectedids(newAllIds);
   };
 
   // Moving Ball....
@@ -80,23 +115,35 @@ function Home() {
 
   //Radio buttons
   const onRadioHandler = (option) => {
+    const newMap = new Map(allIds);
     if (option == "Empty") {
-      setLable(" ");
+      setAllids(new Map());
+      setAllSelectedids(new Map());
       setIdSelect(selectedIds);
+      setAllColumnSelect(selectedIds);
+      setAllRowSelect(selectedIds);
     } else {
-      setLable(option.charAt(0));
-      console.log(label);
+      allSelectedIds.forEach((_, keys) => {
+        newMap.set(keys, option.charAt(0));
+      });
+      setAllids(newMap);
+      setAllSelectedids(new Map());
+      setIdSelect(selectedIds);
+      setAllColumnSelect(selectedIds);
+      setAllRowSelect(selectedIds);
     }
   };
 
   for (let i = 1; i < 13; i++) {
-    ColumnElements.push(
+    ColoumElements.push(
       <GridButton
         id={i.toString()}
         onClickHandler={() => onColumnHandler(i.toString())}
       />
     );
   }
+
+  console.log(allSelectedIds);
 
   return (
     <div className={styles.container}>
@@ -113,7 +160,7 @@ function Home() {
             <div className={styles.grid_container}>
               <div className={styles.grid_child}>
                 <div></div>
-                {ColumnElements.map((element) => {
+                {ColoumElements.map((element) => {
                   return element;
                 })}
               </div>
@@ -126,13 +173,13 @@ function Home() {
                         id={name}
                         onClickHandler={() => onRowsHandler(name)}
                       />
-                      {ColumnElements.map((e, eIndex) => {
+                      {ColoumElements.map((e, eIndex) => {
                         const Colid = `${name}${eIndex + 1}`;
                         return (
                           <GridCells
                             ColId={Colid}
                             onClickHandler={() => onClickHandler(Colid)}
-                            label={label && idSelect.has(Colid) ? label : ""}
+                            label={allIds.has(Colid) ? allIds.get(Colid) : " "}
                             bgColor={
                               idSelect.has(Colid) ||
                               allColumnSelect.has(Colid) ||
@@ -170,6 +217,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

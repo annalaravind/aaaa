@@ -6,7 +6,7 @@ type RadioProps = {
   labelName: string;
 };
 
-export default function Radio({ onChange, labelName }: RadioProps) {
+const Radio = ({ onChange, labelName }: RadioProps) => {
   return (
     <div className={styles.input_label}>
       <input
@@ -20,4 +20,6 @@ export default function Radio({ onChange, labelName }: RadioProps) {
       <div>{labelName}</div>
     </div>
   );
-}
+};
+
+export default Radio;
